@@ -14,7 +14,7 @@ model = pickle.load(open('movie_genre.pkl','rb'))
 def home():
 	return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET'])
 def predict():
   dataset = pd.read_csv('kaggle_movie_train.csv')
   import nltk
