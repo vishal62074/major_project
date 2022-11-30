@@ -94,4 +94,5 @@ def predict():
     prediction = model.predict([[result1]])
   return render_template('result.html', Result=prediction)
 
-app.run()
+if __name__ == "__main__":
+	app.run(debug = True)
